@@ -8,6 +8,7 @@ import FormInput from "../form-input/form-input.component";
 
 import './sign-up-form.styles.scss';
 
+
 const defaultFormFields = {
     displayName: "",
     email: "",
@@ -36,7 +37,7 @@ const SignUpForm = () => {
                 email,
                 password
             );
-
+            
             await createUserDocumentFromAuth(user, { displayName });
             resetFormFields();
         } catch (error) {
